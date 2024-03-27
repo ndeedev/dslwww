@@ -19,7 +19,7 @@ const QuoteBuilder: React.FC = () => {
 
     try {
       const encodedProdNum = encodeURIComponent(prodNum);
-      const response = await fetch(`https://dslwww-7uchinsig-nicks-projects-bd8df28c.vercel.app/${encodedProdNum}`);
+      const response = await fetch(`https://dslwww.vercel.app/quote/${encodedProdNum}`);
       if (!response.ok) {
         throw new Error('Failed to fetch the product');
       }
