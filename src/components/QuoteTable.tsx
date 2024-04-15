@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select"
 
 //commonly used functions
-import { generateRandomLong } from "@/lib/commonfunctions";
+import { buildURL, generateRandomLong } from "@/lib/commonfunctions";
 
 //types and interfaces
 import { Product, WithIndex } from "@/types/product";
@@ -58,8 +58,9 @@ export default function QuoteTable() {
   async function getNextProduct(): Promise<WithIndex[]> {
     try {
       const id = encodeURIComponent(productSearchValue) //cleanse the data so it can be read properly
-      const response = await axios.get(`http://localhost:3000/api/product/${id}`);
-      const newProd = response.data.prod;      
+      const url = buildURL();
+      const response = await axios.get(`${url+id}`);
+      const newProd = response.data.prod;
   
       if (newProd.length === 0) {
         console.log('No Product Found');
