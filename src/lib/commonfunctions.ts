@@ -5,9 +5,6 @@ export function generateRandomLong(): number {
   }
 
   export function buildURL(): string {
-      /*
-        Use this spaghetti to get and use my current URL
-      */
         const protocol = window.location.protocol; // e.g., "https:"
         const hostname = window.location.hostname;
         const port = window.location.port; // Might be an empty string

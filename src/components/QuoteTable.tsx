@@ -58,8 +58,8 @@ export default function QuoteTable() {
   async function getNextProduct(): Promise<WithIndex[]> {
     try {
       const id = encodeURIComponent(productSearchValue) //cleanse the data so it can be read properly
-      const url = buildURL();
-      const response = await axios.get(`${url+id}`);
+      const url = buildURL()
+      const response = await axios.get(`${url}/api/product/${id}`);
       const newProd = response.data.prod;
   
       if (newProd.length === 0) {
