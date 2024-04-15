@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
-import "./globals.css"
+import { Inter as FontSans } from "next/font/google"
+import "../styles/globals.css"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { cn } from "@/lib/utils"
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: {
@@ -22,12 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-1 w-full h-full">
-          {children}
-        </main>
-        <Footer />
+      <body 
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}>
+        <header></header>        
+        <main className="flex flex-col w-full min-h-screen">   
+          <Navbar />
+          <div className="flex-1 overflow-y-auto min-h-0 ">
+            {children}
+          </div>
+          <Footer />
+        </main>       
       </body>
     </html>
   );
