@@ -68,16 +68,16 @@ const Navbar = () => {
             <div className='flex-col py-4'>
                 <ul className="">
                     <Link href="/about">
-                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>...Why us</li>
+                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>Why us</li>
                     </Link>
                     <Link href="/services">
-                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>...Services</li>
+                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>Services</li>
                     </Link>
-                    <Link href="/quote">
-                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>...Quote gen</li>
+                    <Link href="/quotebuilder">
+                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>Quote gen</li>
                     </Link>
                     <Link href="/contact">
-                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>...Contact us</li>
+                        <li className="py-4 cursor-pointer text-black" onClick={() => menuSetMenuOpen(false)}>Contact us</li>
                     </Link>
                 </ul>
             </div>
