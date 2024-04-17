@@ -10,3 +10,8 @@ export interface Product {
     index: number,
     quantity: number,
   }
+
+  export interface GroupHeading {
+    index: number,
+    heading: string,    
+}

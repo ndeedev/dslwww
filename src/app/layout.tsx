@@ -34,7 +34,7 @@ export default function RootLayout({
         <header></header>        
         <main className="flex flex-col w-full min-h-screen">   
           <Navbar />
-          <div className="flex-1 overflow-y-auto min-h-0 ">
+          <div className="flex-1 overflow-y-auto min-h-0 p-3 ">
             {children}
           </div>
           <Footer />
